@@ -12,6 +12,7 @@ class MonologDiscordServiceProvider extends ServiceProvider
      * @var bool
      */
     protected $defer = false;
+
     /**
      * Bootstrap the application events.
      *
@@ -23,6 +24,7 @@ class MonologDiscordServiceProvider extends ServiceProvider
             __DIR__.'/../../config/discordlogger.php' => config_path('discordlogger.php'),
         ]);
     }
+
     /**
      * Register the service provider.
      *
@@ -32,6 +34,7 @@ class MonologDiscordServiceProvider extends ServiceProvider
     {
         //
     }
+
     /**
      * Get the services provided by the provider.
      *
@@ -39,6 +42,6 @@ class MonologDiscordServiceProvider extends ServiceProvider
      */
     public function provides()
     {
-        return array();
+        return [];
     }
 }
