@@ -22,7 +22,7 @@ class DiscordInterface
                                     $context ? $context->getMessage() : $message,
                                     $context ? $context->getFile() : null,
                                     $date);
-        
+
         $this->sendPayload($payload, $this->getWebhookUrl($level_name));
     }
 
@@ -88,13 +88,11 @@ class DiscordInterface
     private function makeEmbed(string $level_name, string $error, string $file = null, string $date) : string
     {
 
-        if ($error && !$file) { 
+        if ($error && ! $file) { 
             $message = "Message : $error";
-        }
-        elseif ($error && $file) {
+        } elseif ($error && $file) {
             $message = "Error : $error\nFile : $file";
-        }
-        else {
+        } else {
             $message = '';
         }
 

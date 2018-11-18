@@ -44,4 +44,5 @@ class MonologDiscordServiceProvider extends ServiceProvider
     {
         return [];
     }
+
 }
