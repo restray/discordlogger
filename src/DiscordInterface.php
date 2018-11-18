@@ -87,7 +87,6 @@ class DiscordInterface
      */
     private function makeEmbed(string $level_name, string $error, string $file = null, string $date) : string
     {
-
         if ($error && ! $file) {
             $message = "Message : $error";
         } elseif ($error && $file) {
