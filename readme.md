@@ -2,7 +2,6 @@
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
-[![Build Status][ico-travis]][link-travis]
 [![StyleCI][ico-styleci]][link-styleci]
 
 Package to auto-send the logs to a Discord server.
@@ -81,12 +80,10 @@ Apache2.0. Please see the [license file](license.md) for more information.
 
 [ico-version]: https://img.shields.io/packagist/v/restray/discordlogger.svg?style=flat-square
 [ico-downloads]: https://img.shields.io/packagist/dt/restray/discordlogger.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/restray/discordlogger/master.svg?style=flat-square
-[ico-styleci]: https://styleci.io/repos/12345678/shield
+[ico-styleci]: https://styleci.io/repos/158100759/shield
 
 [link-packagist]: https://packagist.org/packages/restray/discordlogger
 [link-downloads]: https://packagist.org/packages/restray/discordlogger
-[link-travis]: https://travis-ci.org/restray/discordlogger
-[link-styleci]: https://styleci.io/repos/12345678
+[link-styleci]: https://styleci.io/repos/158100759
 [link-author]: https://github.com/restray
 [link-contributors]: ../../contributors]
