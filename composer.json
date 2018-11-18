@@ -1,7 +1,7 @@
 {
     "name": "restray/discordlogger",
     "description": ":description",
-    "license": "Apache2.0",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Restray",
