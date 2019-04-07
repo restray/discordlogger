@@ -100,11 +100,14 @@ class DiscordInterface
                 [
                     'title' => $level_name,
                     'color' => DiscordEmbedColor::get($level_name),
-                    'description' => $message,
+                    'description' => $message . "\n <@&564201387051712514>",
                     'timestamp' => $date,
                     'url' => url()->current(),
                     'footer' => [
                         'text' => 'Sur ' . env('APP_MACHINE', 'Inconnue'),
+                    ],
+                    'author' => [
+                        'name' => 'Utilisateur : ' . (\Auth::user() ? \Auth::user()->pseudo : 'Inconnu'),
                     ],
                 ],
             ],
