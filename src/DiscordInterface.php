@@ -102,6 +102,10 @@ class DiscordInterface
                     'color' => DiscordEmbedColor::get($level_name),
                     'description' => $message,
                     'timestamp' => $date,
+                    'url' => url()->current(),
+                    'footer' => [
+                        'text' => 'Sur ' . env('APP_MACHINE', 'Inconnue'),
+                    ],
                 ],
             ],
         ];
