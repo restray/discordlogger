@@ -87,10 +87,10 @@ class DiscordInterface
      */
     private function makeEmbed(string $level_name, string $error, string $file = null, string $date) : string
     {
-        if ($error && ! $file) {
-            $message = "Message : $error";
+        if ($error && ! $file) { 
+            $message = "```$error```";
         } elseif ($error && $file) {
-            $message = "Error : $error\nFile : $file";
+            $message = "```$error```\nFile : ```$file```";
         } else {
             $message = '';
         }
@@ -98,13 +98,27 @@ class DiscordInterface
         $payload = [
             'embeds' => [
                 [
-                    'title' => $level_name,
+                    'title' => '__Information__',
                     'color' => DiscordEmbedColor::get($level_name),
-                    'description' => $message . "\n <@&564201387051712514>",
+                    'description' => 'Utilisateur : **' . (\Auth::user() ? \Auth::user()->pseudo : 'Inconnu') . "**\n Date : **$date**",
                     'timestamp' => $date,
                     'url' => url()->current(),
+                    'fields' => [
+                        [
+                            'name' => '__Message__ :',
+                            'value' => $message,
+                        ],
+                        [
+                            'name' => '__Environnement__ :',
+                            'value' => env('APP_MACHINE', 'Inconnu'),
+                        ],
+                        [
+                            'name' => '__Tag__ :',
+                            'value' => '<@&564201387051712514>',
+                        ],
+                    ],
                     'footer' => [
-                        'text' => 'Sur ' . env('APP_MACHINE', 'Inconnue'),
+                        'text' => url()->current(),
                     ],
                     'author' => [
                         'name' => 'Utilisateur : ' . (\Auth::user() ? \Auth::user()->pseudo : 'Inconnu'),
