@@ -19,8 +19,8 @@ class DiscordInterface
         $context = reset($context) ?: null;
 
         $payload = $this->makeEmbed($level_name,
-                                    $context ? $context->getMessage() : $message,
-                                    $context ? $context->getFile() : null,
+                                    ($context && gettype($context) != 'integer')  ? $context->getMessage() : $message,
+                                    ($context && gettype($context) != 'integer')  ? $context->getFile() : null,
                                     $date);
 
         $this->sendPayload($payload, $this->getWebhookUrl($level_name));
