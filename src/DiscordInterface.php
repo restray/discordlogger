@@ -114,7 +114,7 @@ class DiscordInterface
                         ],
                         [
                             'name' => '__Tag__ :',
-                            'value' => '<@&564201387051712514>',
+                            'value' => config('tag-role-id') ?: 'Inconnu',
                         ],
                     ],
                     'footer' => [
