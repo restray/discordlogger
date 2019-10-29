@@ -7,7 +7,7 @@ use Monolog\Handler\AbstractProcessingHandler;
 
 class DiscordHandler extends AbstractProcessingHandler
 {
-    protected function write(array $record)
+    protected function write(array $record): void
     {
         $discord = new DiscordInterface;
 
