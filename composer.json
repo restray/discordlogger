@@ -24,5 +24,12 @@
         "psr-4": {
             "Restray\\DiscordLogger\\": "src/"
         }
+    },
+    "extra": {	
+        "laravel": {	
+            "providers": [	
+                "Restray\\DiscordLogger\\Providers\\MonologDiscordServiceProvider"	
+            ]	
+        }	
     }
 }
