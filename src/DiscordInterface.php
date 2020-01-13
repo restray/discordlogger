@@ -114,7 +114,7 @@ class DiscordInterface
                         ],
                         [
                             'name' => '__Tag__ :',
-                            'value' => config('tag-role-id') ?: 'Inconnu',
+                            'value' => config('discordlogger.tag-role-id') ?: 'Inconnu',
                         ],
                     ],
                     'footer' => [
