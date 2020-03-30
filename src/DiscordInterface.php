@@ -19,8 +19,8 @@ class DiscordInterface
         $context = reset($context) ?: null;
 
         $payload = $this->makeEmbed($level_name,
-                                    ($context && gettype($context) != 'integer')  ? $context->getMessage() : $message,
-                                    ($context && gettype($context) != 'integer')  ? $context->getFile() : null,
+                                    ($context && gettype($context) != 'integer') ? $context->getMessage() : $message,
+                                    ($context && gettype($context) != 'integer') ? $context->getFile() : null,
                                     $date);
 
         $this->sendPayload($payload, $this->getWebhookUrl($level_name));
@@ -70,7 +70,7 @@ class DiscordInterface
      *
      * @return string
      */
-    private function getWebhookUrl(string $level_name) : string
+    private function getWebhookUrl(string $level_name): string
     {
         return config('discordlogger.webhooks.'.strtolower($level_name)) ?: config('discordlogger.webhook');
     }
@@ -85,9 +85,9 @@ class DiscordInterface
      *
      * @return string
      */
-    private function makeEmbed(string $level_name, string $error, string $file = null, string $date) : string
+    private function makeEmbed(string $level_name, string $error, string $file = null, string $date): string
     {
-        if ($error && ! $file) { 
+        if ($error && ! $file) {
             $message = "```$error```";
         } elseif ($error && $file) {
             $message = "```$error```\nFile : ```$file```";
@@ -100,7 +100,7 @@ class DiscordInterface
                 [
                     'title' => '__Information__',
                     'color' => DiscordEmbedColor::get($level_name),
-                    'description' => 'Utilisateur : **' . (\Auth::user() ? \Auth::user()->pseudo : 'Inconnu') . "**\n Date : **$date**",
+                    'description' => 'Utilisateur : **'.(\Auth::user() ? \Auth::user()->pseudo : 'Inconnu')."**\n Date : **$date**",
                     'timestamp' => $date,
                     'url' => url()->current(),
                     'fields' => [
@@ -121,7 +121,7 @@ class DiscordInterface
                         'text' => url()->current(),
                     ],
                     'author' => [
-                        'name' => 'Utilisateur : ' . (\Auth::user() ? \Auth::user()->pseudo : 'Inconnu'),
+                        'name' => 'Utilisateur : '.(\Auth::user() ? \Auth::user()->pseudo : 'Inconnu'),
                     ],
                 ],
             ],

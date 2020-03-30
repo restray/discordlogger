@@ -2,8 +2,8 @@
 
 namespace Restray\DiscordLogger\Handler;
 
-use Restray\DiscordLogger\DiscordInterface;
 use Monolog\Handler\AbstractProcessingHandler;
+use Restray\DiscordLogger\DiscordInterface;
 
 class DiscordHandler extends AbstractProcessingHandler
 {

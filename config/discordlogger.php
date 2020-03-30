@@ -6,7 +6,7 @@ return [
     * messages are splits.
     ****************************************************************************/
     'webhook' => '',
-    'tag-role-id' => '', 
+    'tag-role-id' => '',
 
     'webhooks' => [
         'info' => '',
